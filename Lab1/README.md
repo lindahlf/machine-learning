@@ -10,3 +10,65 @@ MONK-2 is the hardest to learn since it requires the most questions to verify th
 | MONK-1  | 1.0            |
 | MONK-2  | 0.957117428265 |
 | MONK-3  | 0.999806132805 |
+
+### Assignment 2: 
+
+We have the simple definition of entropy as 
+
+E = -plog(p) -qlog(q),
+
+with 
+
+q = 1 - p.
+
+For a uniform distribution we have 
+
+q = p,
+
+and 
+
+q ≠ p, 
+
+for a non-uniform distribution. 
+
+The entropy will be higher for a uniform distribution because there is more unpredicability about the data set, since both outcomes are equally likely (assuming binary). By contrast, the entropy is low for a non-uniform distribution because there is more clarity with regards to what will happen, since one outcome will be more probable than another (again, assuming binary outcomes). See the following examples:
+
+#### Entropy for uniform distribution
+
+p = q = 0.5
+E = 1.
+
+#### Entropy for non-uniform distribution
+
+p = 0.2, q = 0.7,
+E = 0.72.
+
+### Assignment 3
+
+
+| Dataset | a_1   | a_2   | a_3   | a_4   | a_5   | a_6   |
+|---------|-------|-------|-------|-------|-------|-------|
+| MONK-1  | 0.075 | 0.006 | 0.005 | 0.026 | 0.287 | 0.001 |
+| MONK-2  | 0.004 | 0.002 | 0.001 | 0.016 | 0.017 | 0.006 |
+| MONK-3  | 0.007 | 0.294 | 0.001 | 0.003 | 0.256 | 0.007 |
+
+The optimal attribute to be used to split data at root node for the different datasets is
+
+MONK-1: a_5
+MONK-2: a_5
+MONK-3: a_2
+
+### Assignment 4
+
+When maximizing the information gain, the entropy for the datasets decrease maximally since we then know as much as possible at that given stage. By using information gain, we can more easily determine when it is optimal to ask about which attributes to find out more about or dataset quicker. 
+
+### Assignment 5
+
+
+
+
+
+
+
+
+
