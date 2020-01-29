@@ -62,12 +62,17 @@ MONK-3: a_2
 
 When maximizing the information gain, the entropy for the datasets decrease maximally since we then know as much as possible at that given stage. By using information gain, we can more easily determine when it is optimal to ask about which attributes to find out more about or dataset quicker. 
 
+
 ### Assignment 5
 
+We start by splitting the tree based on attribute a_5 
 
-
-
-
+| Dataset | a_1   | a_2   | a_3   | a_4   | a_5 | a_6   |
+|---------|-------|-------|-------|-------|-----|-------|
+| S_1     | 0.0   | 0.0   | 0.0   | 0.0   | 0.0 | 0.0   |
+| S_2     | 0.040 | 0.015 | 0.037 | ##### 0.049 | 0.0 | 0.026 |
+| S_3     | 0.033 | 0.002 | 0.018 | 0.019 | 0.0 | ##### 0.045 |
+| S_4     | ##### 0.206 | 0.034 | 0.026 | 0.076 | 0.0 | 0.003 |
 
 
 
