@@ -74,14 +74,19 @@ We start by splitting the tree based on attribute a_5 and compute the informatio
 | a_5 = 3     | 0.033 | 0.002 | 0.018 | 0.019 | 0.0 | **0.045** |
 | a_5 = 4     | **0.206** | 0.034 | 0.026 | 0.076 | 0.0 | 0.003 |
 
-We start by noting that the dataset is zero for all attributes, which is because we have all information we need when a_5 = 1. For the other three nodes, the attribute with the largest information gain is typed in boldface and thus indicates which attribute we should check for these nodes. Splitting these nodes accordingly, we compute the majority class of them and obtain the following tree shown below.
+We start by noting that the dataset is zero for all attributes, which is because we have all information we need when a_5 = 1. For the other three nodes, the attribute with the largest information gain is typed in boldface and thus indicates which attribute we should check for these nodes. Splitting these nodes accordingly, we compute the majority class for each of them and obtain the following tree shown below.
 
 ![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab1/ass-5-tree.png "tree for assignment 5")
 
+---
+Computing the train and test errors we obtain the following results 
 
+| Dataset | E_train | E_test |
+|---------|---------|--------|
+| MONK-1  | 1.0     | 0.829  |
+| MONK-2  | 1.0     | 0.692  |
+| MONK-3  | 1.0     | 0.944  |
 
-
-
-
+We first note that the there is no error for the training data, since that data was used to generate the trees to begin with. 
 
 
