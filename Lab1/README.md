@@ -65,14 +65,22 @@ When maximizing the information gain, the entropy for the datasets decrease maxi
 
 ### Assignment 5
 
-We start by splitting the tree based on attribute a_5 
+We start by splitting the tree based on attribute a_5 and compute the information gain for the new leafs that we have obtained, shown in the table below:
 
 | Dataset | a_1   | a_2   | a_3   | a_4   | a_5 | a_6   |
 |---------|-------|-------|-------|-------|-----|-------|
-| S_1     | 0.0   | 0.0   | 0.0   | 0.0   | 0.0 | 0.0   |
-| S_2     | 0.040 | 0.015 | 0.037 | **0.049** | 0.0 | 0.026 |
-| S_3     | 0.033 | 0.002 | 0.018 | 0.019 | 0.0 | **0.045** |
-| S_4     | **0.206** | 0.034 | 0.026 | 0.076 | 0.0 | 0.003 |
+| a_5 = 1     | 0.0   | 0.0   | 0.0   | 0.0   | 0.0 | 0.0   |
+| a_5 = 2    | 0.040 | 0.015 | 0.037 | **0.049** | 0.0 | 0.026 |
+| a_5 = 3     | 0.033 | 0.002 | 0.018 | 0.019 | 0.0 | **0.045** |
+| a_5 = 4     | **0.206** | 0.034 | 0.026 | 0.076 | 0.0 | 0.003 |
+
+We start by noting that the dataset is zero for all attributes, which is because we have all information we need when a_5 = 1. For the other three nodes, the attribute with the largest information gain is typed in boldface and thus indicates which attribute we should check for these nodes. Splitting these nodes accordingly, we compute the majority class of them and obtain the following tree shown below.
+
+![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab1/ass-5-tree.png "tree for assignment 5")
+
+
+
+
 
 
 
