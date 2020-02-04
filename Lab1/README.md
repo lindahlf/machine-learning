@@ -79,7 +79,7 @@ We start by noting that the dataset is zero for all attributes, which is because
 ![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab1/ass-5-tree.png "tree for assignment 5")
 
 ---
-Computing the train and test errors we obtain the following results 
+Computing the train and test accuracies we obtain the following results 
 
 | Dataset | E_train | E_test |
 |---------|---------|--------|
@@ -88,6 +88,9 @@ Computing the train and test errors we obtain the following results
 | MONK-3  | 1.0     | 0.944  |
 
 We first note that the there is no error for the training data, since that data was used to generate the trees to begin with. 
+
+The assumptions regarding the data sets were correct. Monk-2 was the hardest to learn. Inspecting the achieved results one can see that the performance on the test data versus the training data differs significantly for Monk-1 and Monk-2. Which is an indication on that the decision trees have been overfitted. This can be due to non-representative sample, noisy samples or a too complex model.
+
 
 ### Assignment 6 
 
