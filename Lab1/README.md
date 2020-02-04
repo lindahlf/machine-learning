@@ -96,3 +96,6 @@ In essence: if do not prune our decision tree at all it can be prone to have hig
 ### Assignment 7 
 
 
+![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab1/ass-7-monk1.png "monk-1 for assignment 7")
+![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab1/ass-7-monk3.png "monk-3 for assignment 7")
+
