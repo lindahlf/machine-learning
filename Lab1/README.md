@@ -89,4 +89,10 @@ Computing the train and test errors we obtain the following results
 
 We first note that the there is no error for the training data, since that data was used to generate the trees to begin with. 
 
+### Assignment 6 
+
+In essence: if do not prune our decision tree at all it can be prone to have high variance, i.e. overfitting. On the other hand, if we 
+
+### Assignment 7 
+
 
