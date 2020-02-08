@@ -34,7 +34,7 @@ def createP(x,t):
     P = np.outer(t,t)
     for i in range(N):
         for j in range(N):
-            P[i,j] *= kernel(t[i],t[j])
+            P[i,j] *= kernel(x[i],x[j])
     return P
 
 def kernel(x1, x2):
@@ -42,16 +42,22 @@ def kernel(x1, x2):
     return np.dot(x1,x2)
 
 def objective(alpha):
-    firstTerm = 0
-    for i in range(N):
-        for j in range(N):
-            firstTerm += alpha[i]*alpha[j]*P[i,j]
-    return 0.5*firstTerm - np.sum(alpha)
+    "Objective function to be minimized"
+    return 0.5*np.dot(np.dot(alpha,P),alpha) - np.sum(alpha)
+
+def zerofun(alpha):
+    "Optimization constraint"
+    return np.dot(alpha,targets) 
 
 inputs, targets, N = generateData()
 P = createP(inputs,targets)
-ret = minimize(objective)
+C = None
+ret = minimize(objective, np.zeros(N), 
+            bounds = [(0,C) for b in range(N)], constraints={'type':'eq', 'fun':zerofun})
+
+a = ret['x']
 
 
-x = np.array([1, 2, 3])
 y = np.array([1, 2, 3])
+
+print(a)
