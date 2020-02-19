@@ -2,6 +2,7 @@ import numpy as np
 import random
 import math
 from scipy.optimize import minimize
+from scipy.spatial import distance
 import matplotlib.pyplot as plt
 
 
@@ -13,7 +14,7 @@ def generateData():
     classA = np.concatenate(
         (np.random.randn(10, 2) * 0.2 + [1.5, 0.5],
          np.random.randn(10, 2) * 0.2 + [-1.5, 0.5]))
-    classB = np.random.randn(20, 2) * 0.2 + [0.0, -0.5]
+    classB = np.random.randn(20, 2) * 0.2 + [0.5, 0.5]
 
     inputs = np.concatenate((classA, classB))
     targets = np.concatenate(
@@ -40,10 +41,20 @@ def createP(x, t):
     return P
 
 
-def kernel(x1, x2):
-    """Performs calculation defined by given kernel of columns x1 and x2. Returns a scalar"""
-    return np.dot(x1, x2)
+# def kernel(x1, x2):
+#     """Performs calculation defined by given kernel of columns x1 and x2. Returns a scalar"""
+#     return np.dot(x1, x2)
 
+# def kernel(x1, x2):
+#     """ Polynomial kernel"""
+#     p = 3
+#     return (np.dot(x1,x2) + 1)**p
+
+def kernel(x1, x2):
+    """ Radial basis function """
+    sigma = 0.5
+    d = distance.euclidean(x1,x2)
+    return np.exp(-d**2/(2*sigma**2))
 
 def objective(alpha):
     """Objective function to be minimized"""
@@ -55,10 +66,26 @@ def zerofun(alpha):
     return np.dot(alpha, targets)
 
 
+def calculateB(idx):
+    """ Calculate bias of hyperplane"""
+    s = inputs[idx]
+    foo = 0
+    for i in range(len(targets)):
+        foo += alpha[i] * targets[i] * kernel(s, inputs[i])
+    return foo - targets[idx]
+
+
 def indicator(x, y):
     """Indicator function"""
-    s = np.array([x,y])
-    return
+    s = np.array([x, y])
+    foo = 0
+    for i in range(len(targets)):
+        foo += alpha[i] * targets[i] * kernel(s, inputs[i])
+    return foo - b
+
+
+def nonzeroIdx(list, threshold):
+    return [idx for idx, val in enumerate(list) if val > threshold]
 
 
 inputs, targets, N, classA, classB = generateData()
@@ -67,14 +94,19 @@ C = None
 ret = minimize(objective, np.zeros(N),
                bounds=[(0, C) for b in range(N)], constraints={'type': 'eq', 'fun': zerofun})
 
-a = ret['x']
+alpha = ret['x']
+
+print("Solution found = " + str(ret['success']))
+# Extract indices of non-zero values in alpha
+supportIdx = nonzeroIdx(alpha, 1e-4)
+
+b = calculateB(supportIdx[0])
+
 
 
 #### Create contours for decision boundary
 xgrid = np.linspace(-5, 5)
 ygrid = np.linspace(-4, 4)
-
-
 
 grid = np.array([[indicator(x, y)
                   for x in xgrid]
