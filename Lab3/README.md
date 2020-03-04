@@ -107,6 +107,81 @@ Final mean classification accuracy  80.2 with standard deviation 3.52
 3. For the iris set it seems to suffice with using boosting, but not fully with the vowel dataset. We some improvement, but it could probably be better given a more accurate method. 
 
 
+## Assignment 6
+
+#### Iris dataset classified using decision tree classifier
+
+![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab3/lab3py/ass6iris.png "ass6iris")
 
 
+```
+Trial: 0 Accuracy 95.6
+Trial: 10 Accuracy 100
+Trial: 20 Accuracy 91.1
+Trial: 30 Accuracy 91.1
+Trial: 40 Accuracy 93.3
+Trial: 50 Accuracy 91.1
+Trial: 60 Accuracy 88.9
+Trial: 70 Accuracy 88.9
+Trial: 80 Accuracy 93.3
+Trial: 90 Accuracy 88.9
+Final mean classification accuracy  92.4 with standard deviation 3.71
+```
+
+
+#### Iris dataset classified using boosted decision tree classifier
+
+![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab3/lab3py/ass6irisboost.png "ass6irisboost")
+
+
+```
+Trial: 0 Accuracy 95.6
+Trial: 10 Accuracy 100
+Trial: 20 Accuracy 95.6
+Trial: 30 Accuracy 93.3
+Trial: 40 Accuracy 93.3
+Trial: 50 Accuracy 95.6
+Trial: 60 Accuracy 88.9
+Trial: 70 Accuracy 93.3
+Trial: 80 Accuracy 93.3
+Trial: 90 Accuracy 93.3
+Final mean classification accuracy  94.6 with standard deviation 3.65
+```
+
+#### Vowels dataset classified using decision tree classifier
+
+![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab3/lab3py/ass6vow.png "ass6vow")
+
+```
+Trial: 0 Accuracy 63.6
+Trial: 10 Accuracy 68.8
+Trial: 20 Accuracy 63.6
+Trial: 30 Accuracy 66.9
+Trial: 40 Accuracy 59.7
+Trial: 50 Accuracy 63
+Trial: 60 Accuracy 59.7
+Trial: 70 Accuracy 68.8
+Trial: 80 Accuracy 59.7
+Trial: 90 Accuracy 68.2
+Final mean classification accuracy  64.1 with standard deviation 4
+```
+
+
+#### Vowels dataset classified using boosted decision tree classifier
+
+![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab3/lab3py/ass6vow.png "ass6vowboost")
+
+```
+Trial: 0 Accuracy 85.7
+Trial: 10 Accuracy 87.7
+Trial: 20 Accuracy 87
+Trial: 30 Accuracy 92.9
+Trial: 40 Accuracy 85.1
+Trial: 50 Accuracy 81.8
+Trial: 60 Accuracy 89
+Trial: 70 Accuracy 85.7
+Trial: 80 Accuracy 87.7
+Trial: 90 Accuracy 84.4
+Final mean classification accuracy  86.8 with standard deviation 2.78
+```
 

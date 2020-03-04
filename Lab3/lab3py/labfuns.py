@@ -259,7 +259,7 @@ def plotBoundary(classifier, dataset='iris', split=0.7):
         plt.scatter(xTe[teClIdx,0],xTe[teClIdx,1],marker='*',c=color,s=50,alpha=0.8, label="Class "+str(c)+" Test")
     plt.legend(bbox_to_anchor=(1., 1), loc=2, borderaxespad=0.)
     fig.subplots_adjust(right=0.7)
-    plt.savefig('ass6iris.png')
+    plt.savefig('ass6vowboost.png')
     plt.show()
 
 
