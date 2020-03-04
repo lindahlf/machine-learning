@@ -240,11 +240,11 @@ class BoostClassifier(object):
 # Now repeat the steps with a decision tree classifier.
 
 
-#testClassifier(DecisionTreeClassifier(), dataset='iris', split=0.7)
+testClassifier(DecisionTreeClassifier(), dataset='iris', split=0.7)
 
 
 
-#testClassifier(BoostClassifier(DecisionTreeClassifier(), T=10), dataset='iris',split=0.7)
+# testClassifier(BoostClassifier(DecisionTreeClassifier(), T=10), dataset='iris',split=0.7)
 
 
 
@@ -256,7 +256,7 @@ class BoostClassifier(object):
 
 
 
-#plotBoundary(DecisionTreeClassifier(), dataset='iris',split=0.7)
+plotBoundary(DecisionTreeClassifier(), dataset='iris',split=0.7)
 
 
 
