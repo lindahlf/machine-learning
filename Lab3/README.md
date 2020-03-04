@@ -109,6 +109,8 @@ Final mean classification accuracy  80.2 with standard deviation 3.52
 
 ## Assignment 6
 
+*Answer questions 1-3 in assignment 5 for the decision tree.*
+
 #### Iris dataset classified using decision tree classifier
 
 ![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab3/lab3py/ass6iris.png "ass6iris")
@@ -148,6 +150,10 @@ Trial: 90 Accuracy 93.3
 Final mean classification accuracy  94.6 with standard deviation 3.65
 ```
 
+1. The classification accuracy is marginally improved with the boosted tree compared to the boosted naive bayesian classifier. Both method seem to be equally good for this dataset. 
+2. In this case the decision boundary is a piecewise continous straight line, which probably stems from the fact that the tree classfies each instance binary. With the non-bosted version its simply a straight line that cannot separate the data. The boosted version is able to tailor itself around the data so that the clusters can be separated. 
+3. In this case boosting improves the accuracy, although it is rather good for the non-boosted verion as well. 
+
 #### Vowels dataset classified using decision tree classifier
 
 ![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab3/lab3py/ass6vow.png "ass6vow")
@@ -185,3 +191,6 @@ Trial: 90 Accuracy 84.4
 Final mean classification accuracy  86.8 with standard deviation 2.78
 ```
 
+1. The non-boosted version performs similarity to the bayesian classifier and we see improvement with the boosted version. There is improvement in the boosted version because it is able to learn from previous instances of a similar tree. 
+2. The decision boundary is very poor in this case and we don't see any improvement with the boosted one either. 
+3. Boosting the decision tree classifier improves the accuracy but not the decsion boundary, which remains very poor even after boosting. 
