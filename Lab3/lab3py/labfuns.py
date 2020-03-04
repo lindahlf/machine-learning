@@ -9,8 +9,8 @@ import random as rnd
 from sklearn.datasets.samples_generator import make_blobs
 from sklearn import decomposition, tree
 
-# import seaborn as sns
-# sns.set()
+import seaborn as sns
+sns.set()
 
 def plot_cov_ellipse(cov, pos, nstd=2, ax=None, **kwargs):
     """
@@ -166,8 +166,10 @@ def plotGaussian(X,y,mu,sigma):
         plot_cov_ellipse(sigma[label], mu[label])
         plt.scatter(Xclass[:,0],Xclass[:,1],linewidths=1,s=25,color=colors[label],marker='o',alpha=0.75)
         c += 1.
-
+    # plt.savefig('ass1.png')
     plt.show()
+    
+  
 
 
 # The function below, `testClassifier`, will be used to try out the different datasets.
@@ -243,7 +245,7 @@ def plotBoundary(classifier, dataset='iris', split=0.7):
     ys = [i+xx+(i*xx)**2 for i in range(len(classes))]
     colormap = cm.rainbow(np.linspace(0, 1, len(ys)))
 
-    fig = plt.figure()
+    fig = plt.figure(figsize=(20,10))
     # plt.hold(True)
     conv = ColorConverter()
     for (color, c) in zip(colormap, classes):
@@ -257,6 +259,7 @@ def plotBoundary(classifier, dataset='iris', split=0.7):
         plt.scatter(xTe[teClIdx,0],xTe[teClIdx,1],marker='*',c=color,s=50,alpha=0.8, label="Class "+str(c)+" Test")
     plt.legend(bbox_to_anchor=(1., 1), loc=2, borderaxespad=0.)
     fig.subplots_adjust(right=0.7)
+    # plt.savefig('ass3vow.png')
     plt.show()
 
 

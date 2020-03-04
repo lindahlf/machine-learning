@@ -123,8 +123,14 @@ mu, sigma = mlParams(X,labels)
 # plotBoundary(BayesClassifier(), dataset='iris',split=0.7)
 
 
+
+# plotBoundary(BayesClassifier(), dataset='vowel',split=0.7)
+
+
+
+
 # ## Boosting functions to implement
-# 
+
 # The lab descriptions state what each function should do.
 
 
@@ -215,15 +221,20 @@ class BoostClassifier(object):
 # Call the `testClassifier` and `plotBoundary` functions for this part.
 
 
-testClassifier(BoostClassifier(BayesClassifier(), T=10), dataset='iris',split=0.7)
+# testClassifier(BoostClassifier(BayesClassifier(), T=10), dataset='iris',split=0.7)
 
 
 
-#testClassifier(BoostClassifier(BayesClassifier(), T=10), dataset='vowel',split=0.7)
+# testClassifier(BoostClassifier(BayesClassifier(), T=10), dataset='vowel',split=0.7)
 
 
 
-plotBoundary(BoostClassifier(BayesClassifier()), dataset='iris',split=0.7)
+# plotBoundary(BoostClassifier(BayesClassifier()), dataset='iris',split=0.7)
+
+
+
+# plotBoundary(BoostClassifier(BayesClassifier()), dataset='vowel',split=0.7)
+
 
 
 # Now repeat the steps with a decision tree classifier.
