@@ -29,7 +29,7 @@ Final mean classification accuracy  89 with standard deviation 4.16
 
 #### Vowels dataset classified using Naive Bayesian classifier
 
-![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab3/lab3py/ass3.png "ass3vow")
+![alt text](https://github.com/lindahlf/machine-learning/blob/master/Lab3/lab3py/ass3vow.png "ass3vow")
 
 ```
 Trial: 0 Accuracy 61
@@ -101,6 +101,10 @@ Trial: 80 Accuracy 79.9
 Trial: 90 Accuracy 83.1
 Final mean classification accuracy  80.2 with standard deviation 3.52
 ```
+
+1. There's a clear improvement in classification accuracy for both datasets, which is the purpose of boosting. This is because we have added weights to the data points which we update iteratively to focus on the points that are difficult to classify. 
+2. The decision boundary for the iris dataset better fits to the data this time around and is more "tailored" to the data. For the vowel dataset we observe the opposite. 
+3. For the iris set it seems to suffice with using boosting, but not fully with the vowel dataset. We some improvement, but it could probably be better given a more accurate method. 
 
 
 
