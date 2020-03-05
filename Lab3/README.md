@@ -194,3 +194,32 @@ Final mean classification accuracy  86.8 with standard deviation 2.78
 1. The non-boosted version performs similarity to the bayesian classifier and we see improvement with the boosted version. There is improvement in the boosted version because it is able to learn from previous instances of a similar tree. 
 2. The decision boundary is very poor in this case and we don't see any improvement with the boosted one either. 
 3. Boosting the decision tree classifier improves the accuracy but not the decsion boundary, which remains very poor even after boosting. 
+
+
+## Assignment 7 
+
+*If you had to pick a classifier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria:*
+
+- *Outliers*
+- *Irrelevant inputs: part of the feature space is irrelevant*
+- *Predictive power*
+- *Mixed types of data: binary, categorical or continuous features, etc.*
+- *Scalability: the dimension of the data, D, is large or the number of instances, N, is large, or both.*
+
+[//]: # (Hello)
+
+#### Outlier: 
+Decsision trees handle outliers well, since we can prune unwanted parts of the tree. We need to be careful with boosting here since it might put more weights on the outliers. 
+
+#### Irrelevant inputs: 
+DT is also good for removing irrelevant inputs through pruning.
+
+#### Predictive power: 
+A boosted NB can be good for this since we are able to average over several outcomes and refine the model. A decision tree on the other hand can be prone to overfitting the data so we have to be careful using DT unless we prune it properly. 
+
+#### Types of data: 
+DT is better for categorical or binary data due to the construction of the algorithm. NB is preferrable with continous data since we can compute statistics for it and get some confidence intervals for it. Nevertheless, if we manipulate the data both methods can accomodate different kinds of data. 
+
+
+#### Scalability 
+Large numbers of data points can me numerically expensive to compute if we use NB since we have to perform a lot matrix of  operations, in which case it might be better to use a decision tree. Also, if we are dealing with high-dimensional data NB might loose a lot of important information and classify incorrectly due to the independence assumption. 
